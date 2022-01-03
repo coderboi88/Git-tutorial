@@ -78,3 +78,5 @@ it will not show all those file in the staging area.It can be generated at the t
 >> git checkout -- <filename>   {It will remove the file from stagged area}
 
 >> git checkout -f  {It will take to previous commit,means all the changes mades which are latest and not being committed will be lost}
+
+>> git commit -a   {With this we can escape the stagging area}

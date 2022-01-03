@@ -1,0 +1,80 @@
+Git Command
+
+Configure Git:-
+>> git config --global user.name "<username>"
+>> git config --global user.email "<email>"
+
+For Cloning the repo in the local system:-
+>> git clone <link>
+
+For getting latest changes from the GitHub or Cloud to the local system:-
+>> git pull
+
+For committing any files, first we have to add them to staging area and then we can commit.
+>> git add <filename>     {This will add the files in staging area}
+>> git commit -m "<message>  {This will get commited in the local system} 
+>> git push <aliasname> <branchname>   {This will push the code in github or cloud}
+
+eg:- git push origin master
+-> origin - alias name of our repo,so that we can commit on that{we can give any name to the alias}
+-> master - branch name {we can put there other branch name also}
+
+Initialising A Repository in local system:-
+>> git init
+
+>> git status {This command will show the new or modified files which are not been added in the staging area,basically it shows the status of the files.}
+>> git status --small  {This is used for small message}
+
+----Git Add Command----
+>> git add .  {It will add all the files present inside the directory}
+>> git add <file1> <file2>  {It will add specifics files}
+>> git add --all  {It will also add all the files}
+>> git add -A  {It will also add all the files}
+--------------------------
+
+----Git Remote Command----
+To set alias name :-
+>> git remote add <aliasname> <url_of_repo>
+eg:- git remote add origin https://github.com/adij1206/gittut.git
+
+>> git remote 
+{This command shows the list of repo to which we have remote connections or we can say that how many repo are present in our local machine}
+
+>> git remote -v
+{This is same as above only it will show the urls also}
+----------------------------
+
+----Git Branches Command----
+>> git branch  {to list branches}
+>> git branch <name>  {creating new branch}
+>> git checkout <branchname>  {switching to another branch}
+>> git checkot -b <branchname>  {Creating and switching to the new branch}
+>> git branch -m <oldname> <newname>  {Rename the branch}
+>> git branch -d <branchname>  {It will delete the branch}
+>> git branch -v  {It will show the last commit history of every branch}
+----------------------------
+
+For merging the branches:-
+>> git merge <branchname>  {We are merging the <branchname> in the current branch from which we are executing this command}
+eg:- we are in aditya/pr branch and we are merging the master into it.
+	git merge master
+
+For Watching the Log history for each and every branch:-
+>> git log
+>> git log --oneline
+>> git log <branchname>
+
+----Git Ignore----
+This is used to create a file inside which we write those file names which we don't want to commit in the github.By defining this file
+it will not show all those file in the staging area.It can be generated at the time of the creation of the repo.We can manually also edit 
+.gitignore file according to our needs.
+
+-> gitignore.io is a website which give readymade .gitignore files for our projects.
+-----------------
+
+>> git fetch <url>  {It will fetch the recent changes in the complete repo}
+>> git fetch <url> <branchname>  {It will fetch the changes of the branch}
+
+>> git checkout -- <filename>   {It will remove the file from stagged area}
+
+>> git checkout -f  {It will take to previous commit,means all the changes mades which are latest and not being committed will be lost}

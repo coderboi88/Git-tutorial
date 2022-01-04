@@ -1,0 +1,10 @@
+Commands from initialising to pushing code in github:-
+
+>> git config --global user.name <username>
+>> git config --global user.email <email>
+>> git init 
+>> git add .
+>> git commit -m "<message>"
+>> git remote add <aliasname> <url>
+>> git push <aliasname> <branchname>  {as from above step here branch will be master}
+
